@@ -1,0 +1,17 @@
+FUNCTION "Z_NATIVE_HANA_EXERCISES.db::TableFunctionDemo"(IP_DISCOUNT decimal(15,2) )
+       RETURNS TABLE
+       (
+PRODID integer,
+PRODNAME varchar(50),
+PRODPRICE decimal(15,2),
+DISCOUNTEDPRICE decimal(15,2)
+       )
+    LANGUAGE SQLSCRIPT 
+    SQL SECURITY INVOKER AS 
+BEGIN 
+    /*****************************
+        Write your function logic
+    ****************************/
+    RETURN
+    SELECT PRODID,PRODNAME,PRODPRICE,(PRODPRICE-(PRODPRICE * IP_DISCOUNT)) as "DISCOUNTEDPRICE" FROM "Z_NATIVE_HANA_EXERCISES.db::ProductDetails";
+END;

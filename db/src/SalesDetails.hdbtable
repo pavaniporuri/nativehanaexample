@@ -1,0 +1,6 @@
+column table "Z_NATIVE_HANA_EXERCISES.db::SalesDetails"
+(
+PRODID integer primary key,
+SALES decimal(15,2),
+REGION varchar(50)
+)

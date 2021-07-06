@@ -1,0 +1,6 @@
+column table "Z_NATIVE_HANA_EXERCISES.db::ORDER_DETAILS"
+(
+ORDERID integer primary key,
+ORDERNAME varchar(50),
+PRICE decimal(15,2)
+)

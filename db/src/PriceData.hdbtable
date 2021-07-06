@@ -1,0 +1,6 @@
+column table "Z_NATIVE_HANA_EXERCISES.db::PriceData"
+(
+PRODID integer primary key,
+prodname varchar(50),
+price decimal(15,2)
+)

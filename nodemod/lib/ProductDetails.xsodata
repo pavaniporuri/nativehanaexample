@@ -1,0 +1,10 @@
+service
+{
+"Z_NATIVE_HANA_EXERCISES.db::ProductDetails" as "Products" navigates
+("CategoryDetails" as "CategoryData");
+
+"Z_NATIVE_HANA_EXERCISES.db::CategoryDetails"  as "CategoryData";
+
+association "CategoryDetails" principal "Products"("PRODID") multiplicity "1"
+dependent "CategoryData"("PRODID")  multiplicity "*";
+}

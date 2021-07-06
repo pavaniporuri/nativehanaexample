@@ -1,0 +1,6 @@
+column table "Z_NATIVE_HANA_EXERCISES.db::CategoryDetails"
+(
+PRODID integer primary key,
+CATEGORY varchar(50),
+STOCK integer
+)
